@@ -1,17 +1,37 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+
+// ReactDOM.render (
+// //   <>
+//   <h1>Favourite Band Members</h1>
+//   <p>My favourite Band members are listed below</p>
+//   <ol>
+//   <li>Cold Play</li>
+//   <li>John Mayer</li>
+//   <li>Sajjan Raj Vaidya</li>
+//   <li>Shreya</li>
+//   </ol>
+//   </>,
+//   document.getElementById('root')
+// )
+
+let css = {
+  color: 'red',
+  fontSize: '50px',
+  textTransform: 'lowercase',
+  letterSpacing : '6px'
+}
+let cssSpan = {
+  color:'green'
+}
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+  <>
+  {/* With internal css */}
+  <h1 style={css}>Hello, <span style ={cssSpan}>Shreya</span></h1> 
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+  {/* with inline css */}
+  <h2 style= {{color: 'blue'}}>How are you?</h2>
+  </>,
+  document.getElementById('root')
+  )
